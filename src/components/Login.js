@@ -6,7 +6,7 @@ function Login() {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div id="animeLeft">
       <Head title="Login" description='Login description' />
       <h1>Login</h1>
       <button onClick={() => navigate("/")}>Login</button>

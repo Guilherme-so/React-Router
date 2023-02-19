@@ -5,7 +5,7 @@ import Head from './Head'
 
 function Home() {
   return (
-    <div>
+    <div id='animeLeft'>
       <Head title='Home' description='Home description' />
       <h1>Home</h1>
       <div className='produto'>
