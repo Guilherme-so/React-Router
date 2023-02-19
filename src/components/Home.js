@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Head from './Head'
 
-
 function Home() {
   return (
     <div id='animeLeft'>
