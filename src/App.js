@@ -1,27 +1,31 @@
-import {BrowserRouter,Route,Routes, useLocation} from "react-router-dom"
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Layout from "./components/Layout";
 import Home from "./components/Home";
 import Sobre from "./components/Sobre";
-import Header from "./components/Header";
-import Error from "./components/Error";
 import Login from "./components/Login";
-import Produto from "./components/Produto/index";
+import Produtos from "./components/Produtos/index";
+import Produto from "./components/Produtos/produto";
+import Error from "./components/Error";
+
 
 function App() {
-
   return (
     <div className="App">
-    <BrowserRouter>
-    <Header />
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/sobre" element={<Sobre />}/>
-      <Route path="/login" element={<Login />}/>
-      <Route path="/produto/:id/*" element={<Produto />}/>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
 
-      <Route path="*" element={<Error />}/>
-    </Routes>
-    </BrowserRouter>
+          <Route path="/produtos">
+            <Route index element={<Produtos />} />
+            <Route path=":id/*" element={<Produto />} />
+          </Route>
+
+          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

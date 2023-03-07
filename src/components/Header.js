@@ -10,7 +10,9 @@ function Header() {
 
   return (
     <div>
-      <NavLink to="/">Home</NavLink> | <NavLink to="/sobre">Sobre</NavLink> |{" "}
+      <NavLink to="/">Home</NavLink> {" "} | {" "}  
+      <NavLink to="/produtos">Produtos</NavLink> {" "} | {" "}
+      <NavLink to="/sobre">Sobre</NavLink> |{" "}
       <NavLink to="/login">Login</NavLink>
     </div>
   );
